@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boatman Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Boatman Rental</h1>
+        <p>Your adventure on the water awaits!</p>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <h2>Book a Boat</h2>
+            <form id="boatBookingForm">
+                <label for="numMembers">Number of Members:</label>
+                <input type="number" id="numMembers" name="numMembers" min="1" required />
+
+                <label for="rentalDate">Rental Date:</label>
+                <input type="date" id="rentalDate" name="rentalDate" required />
+
+                <div id="membersContainer"></div>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <section id="bookingSummary" style="display:none;">
+            <h2>Booking Summary</h2>
+            <p id="summaryDetails"></p>
+            <button id="proceedToPayment">Proceed to Payment</button>
+            <button id="cancelBooking">Cancel</button>
+        </section>
+
+        <section id="paymentSection" style="display:none;">
+            <h2>Payment</h2>
+            <form id="paymentForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required />
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required />
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required />
+
+                <button type="submit">Pay Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Boatman Rental. All rights reserved.</p>
+    </footer>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Confirmed!</h2>
+            <p>Your booking has been successfully confirmed.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
